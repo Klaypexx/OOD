@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "xMbBdyxi0O4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Lab1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dimas\\.nuget\\packages\\csfml\\2.6.1\\csfml.2.6.1.nupkg.sha512",
+    "C:\\Users\\dimas\\.nuget\\packages\\sfml.graphics\\2.6.0\\sfml.graphics.2.6.0.nupkg.sha512",
+    "C:\\Users\\dimas\\.nuget\\packages\\sfml.system\\2.6.0\\sfml.system.2.6.0.nupkg.sha512",
+    "C:\\Users\\dimas\\.nuget\\packages\\sfml.window\\2.6.0\\sfml.window.2.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

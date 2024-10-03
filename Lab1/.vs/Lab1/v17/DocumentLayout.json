@@ -1,0 +1,237 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\decorators\\mathdecorator\\circlemathdecorator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:decorators\\mathdecorator\\circlemathdecorator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\shapes\\rectangles\\rectangleshape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:shapes\\rectangles\\rectangleshape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\utils\\drawshapes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:utils\\drawshapes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\utils\\writeshapesinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:utils\\writeshapesinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\shapes\\shapescreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:shapes\\shapescreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\interfaces\\ishape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:interfaces\\ishape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\decorators\\mathdecorator\\trianglemathdecorator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:decorators\\mathdecorator\\trianglemathdecorator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\input.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:input.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\shapes\\circles\\circleshape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:shapes\\circles\\circleshape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\shapes\\circles\\circlecreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:shapes\\circles\\circlecreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RectangleShape.cs",
+              "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\Rectangles\\RectangleShape.cs",
+              "RelativeDocumentMoniker": "Shapes\\Rectangles\\RectangleShape.cs",
+              "ToolTip": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\Rectangles\\RectangleShape.cs",
+              "RelativeToolTip": "Shapes\\Rectangles\\RectangleShape.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T12:40:01.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CircleCreator.cs",
+              "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\Circles\\CircleCreator.cs",
+              "RelativeDocumentMoniker": "Shapes\\Circles\\CircleCreator.cs",
+              "ToolTip": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\Circles\\CircleCreator.cs",
+              "RelativeToolTip": "Shapes\\Circles\\CircleCreator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:15:01.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DrawShapes.cs",
+              "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Utils\\DrawShapes.cs",
+              "RelativeDocumentMoniker": "Utils\\DrawShapes.cs",
+              "ToolTip": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Utils\\DrawShapes.cs",
+              "RelativeToolTip": "Utils\\DrawShapes.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAzwBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:13:15.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CircleShape.cs",
+              "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\Circles\\CircleShape.cs",
+              "RelativeDocumentMoniker": "Shapes\\Circles\\CircleShape.cs",
+              "ToolTip": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\Circles\\CircleShape.cs",
+              "RelativeToolTip": "Shapes\\Circles\\CircleShape.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:12:40.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CircleMathDecorator.cs",
+              "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Decorators\\MathDecorator\\CircleMathDecorator.cs",
+              "RelativeDocumentMoniker": "Decorators\\MathDecorator\\CircleMathDecorator.cs",
+              "ToolTip": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Decorators\\MathDecorator\\CircleMathDecorator.cs",
+              "RelativeToolTip": "Decorators\\MathDecorator\\CircleMathDecorator.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAUAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:11:34.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IShape.cs",
+              "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Interfaces\\IShape.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IShape.cs",
+              "ToolTip": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Interfaces\\IShape.cs",
+              "RelativeToolTip": "Interfaces\\IShape.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:11:22.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ShapesCreator.cs",
+              "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\ShapesCreator.cs",
+              "RelativeDocumentMoniker": "Shapes\\ShapesCreator.cs",
+              "ToolTip": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\ShapesCreator.cs",
+              "RelativeToolTip": "Shapes\\ShapesCreator.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:05:58.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WriteShapesInfo.cs",
+              "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Utils\\WriteShapesInfo.cs",
+              "RelativeDocumentMoniker": "Utils\\WriteShapesInfo.cs",
+              "ToolTip": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Utils\\WriteShapesInfo.cs",
+              "RelativeToolTip": "Utils\\WriteShapesInfo.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAgwBgAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T22:56:47.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAzwAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T22:45:54.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TriangleMathDecorator.cs",
+              "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Decorators\\MathDecorator\\TriangleMathDecorator.cs",
+              "RelativeDocumentMoniker": "Decorators\\MathDecorator\\TriangleMathDecorator.cs",
+              "ToolTip": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Decorators\\MathDecorator\\TriangleMathDecorator.cs",
+              "RelativeToolTip": "Decorators\\MathDecorator\\TriangleMathDecorator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:11:13.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "input.txt",
+              "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\input.txt",
+              "RelativeDocumentMoniker": "input.txt",
+              "ToolTip": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\input.txt",
+              "RelativeToolTip": "input.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-09-28T23:04:24.175Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1883,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
