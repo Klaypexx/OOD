@@ -3,44 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Utils\\DrawShapes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Utils\\DrawShapes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\lab1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:lab1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\Rectangles\\RectangleShape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Shapes\\Rectangles\\RectangleShape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\utils\\drawshapes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:utils\\drawshapes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\Circles\\CircleCreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Shapes\\Circles\\CircleCreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\shapes\\rectangles\\rectangleshape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:shapes\\rectangles\\rectangleshape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\Circles\\CircleShape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Shapes\\Circles\\CircleShape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\shapes\\circles\\circlecreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:shapes\\circles\\circlecreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Decorators\\MathDecorator\\CircleMathDecorator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Decorators\\MathDecorator\\CircleMathDecorator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\shapes\\circles\\circleshape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:shapes\\circles\\circleshape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Interfaces\\IShape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Interfaces\\IShape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\decorators\\mathdecorator\\circlemathdecorator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:decorators\\mathdecorator\\circlemathdecorator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\ShapesCreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Shapes\\ShapesCreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\interfaces\\ishape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:interfaces\\ishape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Utils\\WriteShapesInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Utils\\WriteShapesInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\shapes\\shapescreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:shapes\\shapescreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Decorators\\MathDecorator\\TriangleMathDecorator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Decorators\\MathDecorator\\TriangleMathDecorator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\utils\\writeshapesinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:utils\\writeshapesinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\input.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:input.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\decorators\\mathdecorator\\trianglemathdecorator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:decorators\\mathdecorator\\trianglemathdecorator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|c:\\users\\dimas\\code\\volgatech\\ood\\lab1\\input.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{62E03B04-2AC2-4849-A94C-38F7EC471DF2}|Lab1.csproj|solutionrelative:input.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,7 +78,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Lab1",
+              "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Lab1.csproj",
+              "RelativeDocumentMoniker": "Lab1.csproj",
+              "ToolTip": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Lab1.csproj",
+              "RelativeToolTip": "Lab1.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-04T19:52:33.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "RectangleShape.cs",
               "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\Rectangles\\RectangleShape.cs",
               "RelativeDocumentMoniker": "Shapes\\Rectangles\\RectangleShape.cs",
@@ -86,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CircleCreator.cs",
               "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\Circles\\CircleCreator.cs",
               "RelativeDocumentMoniker": "Shapes\\Circles\\CircleCreator.cs",
@@ -98,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DrawShapes.cs",
               "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Utils\\DrawShapes.cs",
               "RelativeDocumentMoniker": "Utils\\DrawShapes.cs",
@@ -111,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CircleShape.cs",
               "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\Circles\\CircleShape.cs",
               "RelativeDocumentMoniker": "Shapes\\Circles\\CircleShape.cs",
@@ -123,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CircleMathDecorator.cs",
               "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Decorators\\MathDecorator\\CircleMathDecorator.cs",
               "RelativeDocumentMoniker": "Decorators\\MathDecorator\\CircleMathDecorator.cs",
@@ -135,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "IShape.cs",
               "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Interfaces\\IShape.cs",
               "RelativeDocumentMoniker": "Interfaces\\IShape.cs",
@@ -147,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ShapesCreator.cs",
               "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Shapes\\ShapesCreator.cs",
               "RelativeDocumentMoniker": "Shapes\\ShapesCreator.cs",
@@ -159,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "WriteShapesInfo.cs",
               "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Utils\\WriteShapesInfo.cs",
               "RelativeDocumentMoniker": "Utils\\WriteShapesInfo.cs",
@@ -171,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "TriangleMathDecorator.cs",
               "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\Decorators\\MathDecorator\\TriangleMathDecorator.cs",
               "RelativeDocumentMoniker": "Decorators\\MathDecorator\\TriangleMathDecorator.cs",
@@ -183,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "input.txt",
               "DocumentMoniker": "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab1\\input.txt",
               "RelativeDocumentMoniker": "input.txt",
