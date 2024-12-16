@@ -1,18 +1,34 @@
-﻿using Lab2_1.Toolbars;
+﻿using Lab2_1.Handlers;
+using Lab2_1.Toolbars;
+using Lab2_1.Visitors;
 
 namespace Lab2_1.States;
 
 public class DragAndDropState : State
 {
-    public override void DragAndDrop( Toolbar toolbar ) {}
-
-    public override void FillShape( Toolbar toolbar )
+    public override void OnLeftMouseButton( FiguresHandler figuresHandler, Toolbar toolbar )
     {
-        toolbar.SetState(new FillShapeState());
+        figuresHandler.SelectFigure();
+        figuresHandler.GlobalFrameVisit(new ChangeOutlineThicknessVisitor(toolbar.GetOutlineThickness()));
     }
 
-    public override void FillOutline( Toolbar toolbar )
+    public override void OnLeftMouseButtonWithShift( FiguresHandler figuresHandler )
     {
-        toolbar.SetState(new FillOutlineState());
+        figuresHandler.SelectFigures();
+    }
+
+    public override void OnGroup( FiguresHandler figuresHandler )
+    {
+        figuresHandler.GroupFigures();
+    }
+
+    public override void OnUngroup( FiguresHandler figuresHandler )
+    {
+        figuresHandler.UngroupFigures();
+    }
+
+    public override void OnMouseMove( FiguresHandler figuresHandler )
+    {
+        figuresHandler.Move();
     }
 }

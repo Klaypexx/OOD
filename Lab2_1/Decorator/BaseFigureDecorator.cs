@@ -3,7 +3,7 @@ using SFML.System;
 
 namespace Lab2_1.Decorator;
 
-public abstract class BaseFigureDecorator
+public class BaseFigureDecorator
 {
     public virtual FloatRect GetGlobalBounds() => throw new NotImplementedException();
 

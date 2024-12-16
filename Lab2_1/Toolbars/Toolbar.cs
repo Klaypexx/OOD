@@ -96,17 +96,17 @@ public class Toolbar
 
     public void DragAndDrop()
     {
-        _state.DragAndDrop(this);
+        _state = new DragAndDropState();
     }
 
     public void FillShape()
     {
-        _state.FillShape(this);
+        _state = new FillShapeState();
     }
 
     public void FillOutline()
     {
-        _state.FillOutline(this);
+        _state = new FillOutlineState();
     }
 
     public void SetColor( Color color )

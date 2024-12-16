@@ -44,7 +44,7 @@ public class CircleShape : Shape
     public override void SetOutlineColor( Color color )
     {
         _shape.OutlineColor = color;
-        _shape.OutlineThickness = 2.0f;
+        _shape.OutlineThickness = 5.0f;
     }
 
     public float GetRadius()

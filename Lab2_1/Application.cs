@@ -2,32 +2,37 @@
 using Lab2_1.Handlers;
 using Lab2_1.States;
 using Lab2_1.Toolbars;
-using SFML.Graphics;
 using SFML.Window;
 
 namespace Lab2_1;
 
 public class Application
 {
+    private readonly string path = "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab2_1\\input.txt";
+
     private static Application? _instance;
     private static readonly object _lock = new();
 
     private readonly FiguresHandler _figuresHandler;
     private readonly Toolbar _toolbar;
-    private readonly RenderWindow _window;
+    private readonly MyWindow _window;
     private readonly string _filePath;
 
+    private State _state;
+
     // Приватный конструктор
-    private Application( RenderWindow window, string path )
+    private Application( MyWindow window )
     {
         _figuresHandler = new FiguresHandler(window);
         _toolbar = new Toolbar(window, _figuresHandler);
         _filePath = path;
         _window = window;
+
+        _state = _toolbar.GetState();
     }
 
     // Публичный статический метод для получения экземпляра
-    public static Application GetInstance( RenderWindow window, string path )
+    public static Application GetInstance( MyWindow window )
     {
         if (_instance == null)
         {
@@ -35,7 +40,7 @@ public class Application
             {
                 if (_instance == null)
                 {
-                    _instance = new Application(window, path);
+                    _instance = new Application(window);
                 }
             }
         }
@@ -47,6 +52,23 @@ public class Application
     {
         _figuresHandler.ReadFigures(_filePath);
     }
+
+    public void Run()
+    {
+        while (_window.IsOpen)
+        {
+            Event e;
+            while (_window.TryPollEvent(out e))
+            {
+                Process(e);
+            }
+
+            _window.Clear();
+            Draw();
+            _window.Display();
+        }
+    }
+
 
     public void Process( Event e )
     {
@@ -65,10 +87,7 @@ public class Application
                     {
                         if (e.MouseButton.Button == Mouse.Button.Left)
                         {
-                            if (_toolbar.GetState() is DragAndDropState)
-                            {
-                                _figuresHandler.SelectFigures();
-                            }
+                            _state.OnLeftMouseButtonWithShift(_figuresHandler);
                         }
                     }
                 }
@@ -79,26 +98,9 @@ public class Application
                         if (e.MouseButton.Button == Mouse.Button.Left)
                         {
                             _toolbar.PressToolButton();
+                            _state = _toolbar.GetState();
 
-                            if (_toolbar.GetState() is DragAndDropState )
-                            {
-                                _figuresHandler.SelectFigure();
-                            }
-
-                            if (_toolbar.GetState() is FillShapeState)
-                            {
-                                _figuresHandler.SetFillColor(_toolbar.GetColor());
-                            }
-
-                            if (_toolbar.GetState() is FillOutlineState)
-                            {
-                                _figuresHandler.SetOutlineColor(_toolbar.GetColor());
-                            }
-
-                            if (_toolbar.GetState() is DragAndDropState || _toolbar.GetState() is FillShapeState || _toolbar.GetState() is FillOutlineState)
-                            {
-                                _figuresHandler.ChangeOutlineThickness(_toolbar.GetOutlineThickness());
-                            }
+                            _state.OnLeftMouseButton(_figuresHandler, _toolbar);
                         }
                     }
                 }
@@ -110,18 +112,12 @@ public class Application
                 {
                     if (Keyboard.IsKeyPressed(Keyboard.Key.G))
                     {
-                        if (_toolbar.GetState() is DragAndDropState)
-                        {
-                            _figuresHandler.GroupFigures();
-                        }
+                        _state.OnGroup(_figuresHandler);
                     }
 
                     if (Keyboard.IsKeyPressed(Keyboard.Key.U))
                     {
-                        if (_toolbar.GetState() is DragAndDropState)
-                        {
-                            _figuresHandler.UngroupFigures();
-                        }
+                        _state.OnUngroup(_figuresHandler);
                     }
                 }
 
@@ -130,10 +126,7 @@ public class Application
             case EventType.MouseMoved:
                 if (Mouse.IsButtonPressed(Mouse.Button.Left))
                 {
-                    if (_toolbar.GetState() is DragAndDropState)
-                    {
-                        _figuresHandler.Move();
-                    }
+                    _state.OnMouseMove(_figuresHandler);
                 }
                 break;
         }

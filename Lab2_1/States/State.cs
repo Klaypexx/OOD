@@ -1,10 +1,17 @@
-﻿using Lab2_1.Toolbars;
+﻿using Lab2_1.Handlers;
+using Lab2_1.Toolbars;
 
 namespace Lab2_1.States;
 
-public abstract class State
+public class State
 {
-    public virtual void DragAndDrop( Toolbar toolbar ) => throw new NotImplementedException();
-    public virtual void FillShape( Toolbar toolbar ) => throw new NotImplementedException();
-    public virtual void FillOutline( Toolbar toolbar ) => throw new NotImplementedException();
+    public virtual void OnLeftMouseButton( FiguresHandler figuresHandler, Toolbar toolbar ) { }
+
+    public virtual void OnLeftMouseButtonWithShift( FiguresHandler figuresHandler ) { }
+
+    public virtual void OnGroup( FiguresHandler figuresHandler ) { }
+
+    public virtual void OnUngroup( FiguresHandler figuresHandler ) { }
+
+    public virtual void OnMouseMove( FiguresHandler figuresHandler ) { }
 }

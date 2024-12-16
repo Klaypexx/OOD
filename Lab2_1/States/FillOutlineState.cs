@@ -1,18 +1,14 @@
-﻿using Lab2_1.Toolbars;
+﻿using Lab2_1.Handlers;
+using Lab2_1.Toolbars;
+using Lab2_1.Visitors;
 
 namespace Lab2_1.States;
 
 public class FillOutlineState : State
 {
-    public override void DragAndDrop( Toolbar toolbar )
+    public override void OnLeftMouseButton( FiguresHandler figuresHandler, Toolbar toolbar )
     {
-        toolbar.SetState(new DragAndDropState());
+        figuresHandler.Visit(new SetOutlineColorVisitor(toolbar.GetColor()));
+        figuresHandler.GlobalFrameVisit(new ChangeOutlineThicknessVisitor(toolbar.GetOutlineThickness()));
     }
-
-    public override void FillShape( Toolbar toolbar )
-    {
-        toolbar.SetState(new FillShapeState());
-    }
-
-    public override void FillOutline( Toolbar toolbar ) { }
 }

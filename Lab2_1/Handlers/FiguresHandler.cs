@@ -6,6 +6,7 @@ using Lab2_1.Decorator.Triangles;
 using Lab2_1.Shapes.Circles;
 using Lab2_1.Shapes.Rectangles;
 using Lab2_1.Shapes.Triangle;
+using Lab2_1.Visitors;
 using SFML.Graphics;
 using SFML.System;
 
@@ -96,30 +97,22 @@ public class FiguresHandler
         _cursorPosition = position;
     }
 
-    public void SetFillColor( Color color )
+    public void Visit(FigureDecoratorVisitor visitor)
     {
         foreach (BaseFigureDecorator figure in _selectedFigures)
         {
-            figure.SetFillColor(color);
+            visitor.Visit(figure);
         }
     }
 
-    public void SetOutlineColor( Color color )
-    {
-        foreach (BaseFigureDecorator figure in _selectedFigures)
-        {
-            figure.SetOutlineColor(color);
-        }
-    }
-
-    public void ChangeOutlineThickness( float thickness )
+    public void GlobalFrameVisit(FigureDecoratorVisitor visitor)
     {
         if (_globalFrame is null)
         {
             return;
         }
 
-        _globalFrame.SetOutlineThickness(thickness);
+        visitor.Visit(_globalFrame);
     }
 
     public void SelectFigures()
@@ -152,18 +145,9 @@ public class FiguresHandler
                     UpdateFrameBound();
                 }
 
-                /*if (_selectedFigures.Contains(figure))
-                {
-                    UnselectFigure(figure);
-                    Console.WriteLine(string.Join(", ", _selectedFigures.Select(x => x.ToString())));
-                    SelectedFiguresCount();
-                    UpdateFrameBound();
-                    break;
-                }*/
-
                 _selectedFigures.Clear();
                 _selectedFigures.Add(figure);
-                /*    Console.WriteLine(string.Join(", ", _selectedFigures.Select(x => x.ToString())));*/
+
                 SelectedFiguresCount();
                 UpdateFrameBound();
             }
@@ -233,13 +217,6 @@ public class FiguresHandler
             {
                 Vector2f currentPosition = figure.GetPosition();
                 FloatRect bounds = figure.GetGlobalBounds();
-
-                /* // Проверяем, чтобы фигура не перемещалась в зону панели инструментов
-                 if (currentPosition.Y + delta.Y < toolbarHeight && bounds.Top >= toolbarHeight)
-                 {
-                     // Если фигура пытается переместиться в зону панели инструментов, отменяем вертикальное перемещение
-                     delta.Y = 0;
-                 }*/
 
                 // Перемещаем фигуру с учетом ограничений
                 figure.SetPosition(currentPosition.X + delta.X, currentPosition.Y + delta.Y);

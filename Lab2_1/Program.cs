@@ -5,27 +5,13 @@ class Program
 {
     static void Main()
     {
-        string path = "C:\\Users\\dimas\\Code\\Volgatech\\OOD\\Lab2_1\\input.txt";
-
         MyWindow window = new(new VideoMode(1920, 1080), "Geometric Shapes");
         window.SetVerticalSyncEnabled(true);
 
-        Application application = Application.GetInstance(window, path);
+        Application application = Application.GetInstance(window);
+
         application.ReadFigures();
-
-        while (window.IsOpen)
-        {
-            Event e;
-            while (window.TryPollEvent(out e))
-            {
-                application.Process(e);
-            }
-
-            window.Clear();
-            application.Draw();
-            window.Display();
-        }
-
+        application.Run();
         application.PrintFiguresInfo();
     }
 }
