@@ -27,6 +27,11 @@ public class FigureDecorator : BaseFigureDecorator
         return _shape.GetDrawable();
     }
 
+    public override Shape GetShape()
+    {
+        return _shape;
+    }
+
     public override void Draw( SFML.Graphics.RenderWindow window )
     {
         window.Draw(GetDrawable());

@@ -1,5 +1,6 @@
 ﻿using SFML.Graphics;
 using SFML.System;
+using System.Drawing;
 
 namespace Lab2_1.Shapes.Rectangles;
 
@@ -14,7 +15,19 @@ public class RectangleShape : Shape
         _shape = new SFML.Graphics.RectangleShape(size)
         {
             Position = topLeft,
-            FillColor = Color.Yellow
+            FillColor = SFML.Graphics.Color.Yellow
+        };
+    }
+
+    public RectangleShape( RectangleShape rectangleShape )
+    {
+        _shape = new SFML.Graphics.RectangleShape()
+        {
+            Size = rectangleShape.GetSize(),
+            Position = rectangleShape.GetPosition(),
+            FillColor = rectangleShape.GetFillColor(),
+            OutlineColor = rectangleShape.GetOutlineColor(),
+            OutlineThickness = rectangleShape.GetOutlineThickness()
         };
     }
 
@@ -33,17 +46,27 @@ public class RectangleShape : Shape
         return _shape;
     }
 
+    public override SFML.Graphics.Color GetFillColor()
+    {
+        return _shape.FillColor;
+    }
+
+    public override SFML.Graphics.Color GetOutlineColor()
+    {
+        return _shape.OutlineColor;
+    }
+
     public override void SetPosition( float x, float y )
     {
         _shape.Position = new Vector2f(x, y);
     }
 
-    public override void SetFillColor( Color color )
+    public override void SetFillColor( SFML.Graphics.Color color )
     {
         _shape.FillColor = color;
     }
 
-    public override void SetOutlineColor( Color color )
+    public override void SetOutlineColor( SFML.Graphics.Color color )
     {
         _shape.OutlineColor = color;
         _shape.OutlineThickness = 5.0f;
@@ -52,6 +75,11 @@ public class RectangleShape : Shape
     public Vector2f GetSize()
     {
         return _shape.Size;
+    }
+
+    public float GetOutlineThickness()
+    {
+        return _shape.OutlineThickness;
     }
 
     public void SetSize( float width, float height )

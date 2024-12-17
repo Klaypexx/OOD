@@ -16,19 +16,29 @@ public class CircleShape : Shape
         };
     }
 
-    public override FloatRect GetGlobalBounds()
-    {
-        return _shape.GetGlobalBounds();
-    }
-
     public override Vector2f GetPosition()
     {
         return _shape.Position;
     }
 
+    public override Color GetFillColor()
+    {
+        return _shape.FillColor;
+    }
+
+    public override Color GetOutlineColor()
+    {
+        return _shape.OutlineColor;
+    }
+
     public override Drawable GetDrawable()
     {
         return _shape;
+    }
+
+    public override FloatRect GetGlobalBounds()
+    {
+        return _shape.GetGlobalBounds();
     }
 
     public override void SetPosition( float x, float y )
@@ -51,4 +61,5 @@ public class CircleShape : Shape
     {
         return _shape.Radius;
     }
+
 }

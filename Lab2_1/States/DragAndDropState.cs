@@ -31,4 +31,9 @@ public class DragAndDropState : State
     {
         figuresHandler.Move();
     }
+
+    public override void OnUndo( FiguresHandler figuresHandler )
+    {
+        figuresHandler.Undo();
+    }
 }

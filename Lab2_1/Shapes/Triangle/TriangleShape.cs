@@ -24,14 +24,25 @@ public class TriangleShape : Shape
         _shape.SetPoint(2, p3);
     }
 
-    public override FloatRect GetGlobalBounds()
-    {
-        return _shape.GetGlobalBounds();
-    }
 
     public override Vector2f GetPosition()
     {
         return _shape.Position;
+    }
+
+    public override Color GetFillColor()
+    {
+        return _shape.FillColor;
+    }
+
+    public override Color GetOutlineColor()
+    {
+        return _shape.OutlineColor;
+    }
+
+    public override FloatRect GetGlobalBounds()
+    {
+        return _shape.GetGlobalBounds();
     }
 
     public override Drawable GetDrawable()

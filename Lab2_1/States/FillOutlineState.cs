@@ -9,6 +9,10 @@ public class FillOutlineState : State
     public override void OnLeftMouseButton( FiguresHandler figuresHandler, Toolbar toolbar )
     {
         figuresHandler.Visit(new SetOutlineColorVisitor(toolbar.GetColor()));
-        figuresHandler.GlobalFrameVisit(new ChangeOutlineThicknessVisitor(toolbar.GetOutlineThickness()));
+    }
+
+    public override void OnUndo( FiguresHandler figuresHandler )
+    {
+        figuresHandler.Undo();
     }
 }

@@ -119,6 +119,11 @@ public class Application
                     {
                         _state.OnUngroup(_figuresHandler);
                     }
+
+                    if (Keyboard.IsKeyPressed(Keyboard.Key.Z))
+                    {
+                        _state.OnUndo(_figuresHandler);
+                    }
                 }
 
                 break;

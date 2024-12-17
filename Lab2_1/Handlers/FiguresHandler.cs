@@ -3,6 +3,7 @@ using Lab2_1.Decorator;
 using Lab2_1.Decorator.Circles;
 using Lab2_1.Decorator.Rectangles;
 using Lab2_1.Decorator.Triangles;
+using Lab2_1.Memento;
 using Lab2_1.Shapes.Circles;
 using Lab2_1.Shapes.Rectangles;
 using Lab2_1.Shapes.Triangle;
@@ -14,10 +15,11 @@ namespace Lab2_1.Handlers;
 
 public class FiguresHandler
 {
-    private readonly List<BaseFigureDecorator> _figures;
-    private readonly HashSet<BaseFigureDecorator> _selectedFigures;
+    private List<BaseFigureDecorator> _figures;
+    private List<BaseFigureDecorator> _selectedFigures;
     private BaseFigureDecorator? _globalFrame = null;
     private readonly RenderWindow _window;
+    private readonly List<FigureDecoratorMemento> _history;
 
     private Vector2i _cursorPosition, _previousCursorPosition;
 
@@ -26,6 +28,9 @@ public class FiguresHandler
         _window = window;
         _figures = [];
         _selectedFigures = [];
+        _history = [];
+
+        SaveHistory();
     }
 
     public void ReadFigures( string path )
@@ -56,6 +61,47 @@ public class FiguresHandler
                 _figures.Add((BaseFigureDecorator)new CircleDecorator(CircleCreator.Create(points)));
             }
         }
+    }
+
+    public List<BaseFigureDecorator> CreateFigures( List<BaseFigureDecorator> figures )
+    {
+        List<BaseFigureDecorator> newFigures = new List<BaseFigureDecorator>();
+
+        foreach (BaseFigureDecorator figure in figures)
+        {
+            if (figure is RectangleDecorator)
+            {
+                // Получаем оригинальный RectangleShape
+                Shapes.Rectangles.RectangleShape oldRectangleShape = (Shapes.Rectangles.RectangleShape)figure.GetShape();
+                Shapes.Rectangles.RectangleShape newRectangleShape = new Shapes.Rectangles.RectangleShape(oldRectangleShape);
+
+                // Создаем новый декоратор с новым RectangleShape
+                RectangleDecorator newRectangleDecorator = new RectangleDecorator(newRectangleShape);
+
+                newFigures.Add(newRectangleDecorator);
+            }
+        }
+
+        return newFigures;
+    }
+
+    public BaseFigureDecorator CreateFigure( BaseFigureDecorator? figure )
+    {
+        BaseFigureDecorator newFigures = new BaseFigureDecorator();
+
+        if (figure is RectangleDecorator)
+        {
+            // Получаем оригинальный RectangleShape
+            Shapes.Rectangles.RectangleShape oldRectangleShape = (Shapes.Rectangles.RectangleShape)figure.GetShape();
+            Shapes.Rectangles.RectangleShape newRectangleShape = new Shapes.Rectangles.RectangleShape(oldRectangleShape);
+
+            // Создаем новый декоратор с новым RectangleShape
+            RectangleDecorator newRectangleDecorator = new RectangleDecorator(newRectangleShape);
+
+            newFigures = newRectangleDecorator;
+        }
+
+        return newFigures;
     }
 
     public List<BaseFigureDecorator> GetFigures()
@@ -103,6 +149,8 @@ public class FiguresHandler
         {
             visitor.Visit(figure);
         }
+
+        SaveHistory();
     }
 
     public void GlobalFrameVisit(FigureDecoratorVisitor visitor)
@@ -113,6 +161,8 @@ public class FiguresHandler
         }
 
         visitor.Visit(_globalFrame);
+
+        SaveHistory();
     }
 
     public void SelectFigures()
@@ -150,6 +200,8 @@ public class FiguresHandler
 
                 SelectedFiguresCount();
                 UpdateFrameBound();
+
+                SaveHistory();
             }
         }
     }
@@ -198,7 +250,6 @@ public class FiguresHandler
                     }
                 }
             }
-
         }
     }
 
@@ -209,17 +260,18 @@ public class FiguresHandler
             // Вычисляем смещение курсора
             Vector2i delta = _cursorPosition - _previousCursorPosition;
 
-            // Определяем границы панели инструментов
-            float toolbarHeight = 40.0f; // высота панели инструментов
-
             // Перемещаем каждую выбранную фигуру
             foreach (BaseFigureDecorator figure in _selectedFigures)
             {
-                Vector2f currentPosition = figure.GetPosition();
-                FloatRect bounds = figure.GetGlobalBounds();
+                if (_selectedFigures.Any(f => f.GetGlobalBounds().Contains(_cursorPosition.X, _cursorPosition.Y)))
+                {
 
-                // Перемещаем фигуру с учетом ограничений
-                figure.SetPosition(currentPosition.X + delta.X, currentPosition.Y + delta.Y);
+                    Vector2f currentPosition = figure.GetPosition();
+                    FloatRect bounds = figure.GetGlobalBounds();
+
+                    // Перемещаем фигуру с учетом ограничений
+                    figure.SetPosition(currentPosition.X + delta.X, currentPosition.Y + delta.Y);
+                }
             }
 
             // Обновляем границы рамки для выбранных фигур
@@ -227,6 +279,24 @@ public class FiguresHandler
         }
     }
 
+    public void Undo()
+    {
+        Console.WriteLine(_history.Count);
+        if (_history.Count > 1)
+        {
+            var previousMemento = _history.Last();
+            _figures = previousMemento.GetFigures();
+            _selectedFigures = previousMemento.GetSelectedFigures();
+            _globalFrame = previousMemento.GetGlobalFrame();
+            UpdateFrameBound();
+            _history.RemoveAt(_history.Count - 1);
+        }
+    }
+
+    private void SaveHistory()
+    {
+        _history.Add(new FigureDecoratorMemento(CreateFigures(_figures), CreateFigures(_selectedFigures), CreateFigure(_globalFrame)));
+    }
 
     private void UpdateFrameBound()
     {
@@ -269,19 +339,5 @@ public class FiguresHandler
     private void SelectedFiguresCount()
     {
         Console.WriteLine(_selectedFigures.Count());
-    }
-
-    private void UnselectFigure( BaseFigureDecorator figure )
-    {
-        _selectedFigures.Remove(figure);
-    }
-
-    public void UnselectFigure()
-    {
-        if (_selectedFigures.Count() > 0)
-        {
-            _selectedFigures.Clear();
-            UpdateFrameBound();
-        }
     }
 }
