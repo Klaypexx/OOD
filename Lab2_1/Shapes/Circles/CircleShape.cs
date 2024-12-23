@@ -1,4 +1,5 @@
-﻿using SFML.Graphics;
+﻿using Lab2_1.Shapes.Rectangles;
+using SFML.Graphics;
 using SFML.System;
 
 namespace Lab2_1.Shapes.Circles;
@@ -13,6 +14,19 @@ public class CircleShape : Shape
         {
             Position = new Vector2f(center.X - radius, center.Y - radius),
             FillColor = Color.Blue
+        };
+    }
+
+    public CircleShape(CircleShape circleShape)
+    {
+        this.SetId(circleShape.GetId());
+
+        _shape = new SFML.Graphics.CircleShape()
+        {
+            Radius = circleShape.GetRadius(),
+            Position = circleShape.GetPosition(),
+            FillColor = circleShape.GetFillColor(),
+            OutlineColor = circleShape.GetOutlineColor()
         };
     }
 
@@ -57,9 +71,13 @@ public class CircleShape : Shape
         _shape.OutlineThickness = 5.0f;
     }
 
+    public override void Draw( RenderWindow window )
+    {
+        window.Draw(GetDrawable());
+    }
+
     public float GetRadius()
     {
         return _shape.Radius;
     }
-
 }

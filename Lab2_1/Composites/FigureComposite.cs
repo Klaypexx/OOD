@@ -1,16 +1,23 @@
-﻿using Lab2_1.Decorator;
-using SFML.Graphics;
+﻿using SFML.Graphics;
 using SFML.System;
 
 namespace Lab2_1.Composites
 {
-    public class FigureComposite : BaseFigureDecorator
+    public class FigureComposite : Shapes.Shape
     {
-        private readonly List<BaseFigureDecorator> _figures = new();
+        private readonly List<Shapes.Shape> _figures;
 
-        public FigureComposite() { }
+        public FigureComposite(Shapes.Shape figure)
+        {
+            _figures = new() { figure };
+        }
 
-        public void Add( BaseFigureDecorator figure )
+        public FigureComposite() 
+        {
+            _figures = new();
+        }
+
+        public void Add( Shapes.Shape figure )
         {
             _figures.Add(figure);
         }
@@ -26,7 +33,7 @@ namespace Lab2_1.Composites
 
         public override void Draw( RenderWindow window )
         {
-            foreach (var figure in _figures)
+            foreach (Shapes.Shape figure in _figures)
             {
                 figure.Draw(window);
             }
@@ -37,7 +44,7 @@ namespace Lab2_1.Composites
             float left = float.MaxValue, top = float.MaxValue;
             float right = float.MinValue, bottom = float.MinValue;
 
-            foreach (BaseFigureDecorator figure in _figures)
+            foreach (Shapes.Shape figure in _figures)
             {
                 var bounds = figure.GetGlobalBounds();
                 if (bounds.Left < left) left = bounds.Left;
@@ -122,8 +129,7 @@ namespace Lab2_1.Composites
             }
         }
 
-
-        public List<BaseFigureDecorator> GetFigures()
+        public List<Shapes.Shape> GetFigures()
         {
             return _figures;
         }

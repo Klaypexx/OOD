@@ -1,6 +1,6 @@
-﻿using SFML.Graphics;
+﻿using Lab2_1.Shapes.Triangle;
+using SFML.Graphics;
 using SFML.System;
-using System.Drawing;
 
 namespace Lab2_1.Shapes.Rectangles;
 
@@ -21,6 +21,8 @@ public class RectangleShape : Shape
 
     public RectangleShape( RectangleShape rectangleShape )
     {
+        this.SetId(rectangleShape.GetId());
+
         _shape = new SFML.Graphics.RectangleShape()
         {
             Size = rectangleShape.GetSize(),
@@ -72,6 +74,21 @@ public class RectangleShape : Shape
         _shape.OutlineThickness = 5.0f;
     }
 
+    public override void SetOutlineThickness( float thickness )
+    {
+        _shape.OutlineThickness = thickness;
+    }
+
+    public override void SetSize( float width, float height )
+    {
+        _shape.Size = new Vector2f(width, height);
+    }
+
+    public override void Draw( RenderWindow window )
+    {
+        window.Draw(GetDrawable());
+    }
+
     public Vector2f GetSize()
     {
         return _shape.Size;
@@ -80,15 +97,5 @@ public class RectangleShape : Shape
     public float GetOutlineThickness()
     {
         return _shape.OutlineThickness;
-    }
-
-    public void SetSize( float width, float height )
-    {
-        _shape.Size = new Vector2f(width, height);
-    }
-
-    public void SetOutlineThickness( float thickness )
-    {
-        _shape.OutlineThickness = thickness;
     }
 }

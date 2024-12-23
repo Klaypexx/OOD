@@ -10,7 +10,7 @@ namespace Lab2_1.Toolbars;
 public class Toolbar
 {
     private readonly List<Button> _buttons = new();
-    private readonly SFML.Graphics.RenderWindow _window;
+    private readonly RenderWindow _window;
     private readonly FiguresHandler _figreHandler;
 
     private State _state;
@@ -19,7 +19,7 @@ public class Toolbar
     private float _outlineThickness = 1;
     private Color _color = Color.Red;
 
-    public Toolbar( SFML.Graphics.RenderWindow window, FiguresHandler figureHandler ) 
+    public Toolbar( RenderWindow window, FiguresHandler figureHandler ) 
     {
         _window = window;   
 
@@ -65,6 +65,8 @@ public class Toolbar
 
     public void SetChangeThicknessVisible()
     {
+        _state = new OutlineThicknessState();
+
         foreach (Button button in _buttons)
         {
             if (button.GetId() == 6)
@@ -76,6 +78,8 @@ public class Toolbar
 
     public void AddOutlineThickness()
     {
+        _state = new OutlineThicknessState();
+
         if (_outlineThickness >= 5)
         {
             return;
@@ -86,6 +90,8 @@ public class Toolbar
 
     public void ReduceOutlineThickness()
     {
+        _state = new OutlineThicknessState();
+
         if (_outlineThickness <= 1)
         {
             return;
@@ -134,6 +140,11 @@ public class Toolbar
     {
         _state = state;
         Console.WriteLine(GetState());
+    }
+
+    public void ResetState()
+    {
+        _state = new();
     }
 
     public State GetState()

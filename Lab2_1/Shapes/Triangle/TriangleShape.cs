@@ -24,6 +24,28 @@ public class TriangleShape : Shape
         _shape.SetPoint(2, p3);
     }
 
+    public TriangleShape( TriangleShape triangleShape )
+    {
+        this.SetId(triangleShape.GetId()); 
+
+        List<Vector2f> points = triangleShape.GetPoints();
+        _p1 = points[0];
+        _p2 = points[1];
+        _p3 = points[2];
+
+        _shape = new ConvexShape(3)
+        {
+            Position = triangleShape.GetPosition(),
+            FillColor = triangleShape.GetFillColor(),
+            OutlineColor = triangleShape.GetOutlineColor()
+        };
+
+        _shape.SetPoint(0, _p1);
+        _shape.SetPoint(1, _p2);
+        _shape.SetPoint(2, _p3);
+
+    }
+
 
     public override Vector2f GetPosition()
     {
@@ -64,6 +86,11 @@ public class TriangleShape : Shape
     {
         _shape.OutlineColor = color;
         _shape.OutlineThickness = 5.0f;
+    }
+
+    public override void Draw( RenderWindow window )
+    {
+        window.Draw(GetDrawable());
     }
 
     public List<Vector2f> GetPoints()

@@ -1,5 +1,12 @@
 ﻿using Lab2_1.Decorator;
+using Lab2_1.Decorator.Circles;
+using Lab2_1.Decorator.Rectangles;
+using Lab2_1.Decorator.Triangles;
 using Lab2_1.Handlers;
+using Lab2_1.Shapes;
+using Lab2_1.Shapes.Circles;
+using Lab2_1.Shapes.Rectangles;
+using Lab2_1.Shapes.Triangle;
 using Lab2_1.States;
 using Lab2_1.Toolbars;
 using SFML.Window;
@@ -20,7 +27,6 @@ public class Application
 
     private State _state;
 
-    // Приватный конструктор
     private Application( MyWindow window )
     {
         _figuresHandler = new FiguresHandler(window);
@@ -31,7 +37,6 @@ public class Application
         _state = _toolbar.GetState();
     }
 
-    // Публичный статический метод для получения экземпляра
     public static Application GetInstance( MyWindow window )
     {
         if (_instance == null)
@@ -69,7 +74,6 @@ public class Application
         }
     }
 
-
     public void Process( Event e )
     {
         _figuresHandler.SetCursorPosition(Mouse.GetPosition(_window));
@@ -78,78 +82,108 @@ public class Application
         switch (e.Type)
         {
             case EventType.Closed:
-                _window.Close();
+                HandleClosedEvent();
                 break;
             case EventType.MouseButtonPressed:
-                if (Keyboard.IsKeyPressed(Keyboard.Key.LShift))
-                {
-                    if (e.Type == EventType.MouseButtonPressed)
-                    {
-                        if (e.MouseButton.Button == Mouse.Button.Left)
-                        {
-                            _state.OnLeftMouseButtonWithShift(_figuresHandler);
-                        }
-                    }
-                }
-                else
-                {
-                    if (e.Type == EventType.MouseButtonPressed)
-                    {
-                        if (e.MouseButton.Button == Mouse.Button.Left)
-                        {
-                            _toolbar.PressToolButton();
-                            _state = _toolbar.GetState();
-
-                            _state.OnLeftMouseButton(_figuresHandler, _toolbar);
-                        }
-                    }
-                }
+                HandleMouseButtonPressedEvent(e);
                 break;
-
             case EventType.KeyPressed:
-
-                if (Keyboard.IsKeyPressed(Keyboard.Key.LControl))
-                {
-                    if (Keyboard.IsKeyPressed(Keyboard.Key.G))
-                    {
-                        _state.OnGroup(_figuresHandler);
-                    }
-
-                    if (Keyboard.IsKeyPressed(Keyboard.Key.U))
-                    {
-                        _state.OnUngroup(_figuresHandler);
-                    }
-
-                    if (Keyboard.IsKeyPressed(Keyboard.Key.Z))
-                    {
-                        _state.OnUndo(_figuresHandler);
-                    }
-                }
-
+                HandleKeyPressedEvent();
                 break;
-
             case EventType.MouseMoved:
-                if (Mouse.IsButtonPressed(Mouse.Button.Left))
-                {
-                    _state.OnMouseMove(_figuresHandler);
-                }
+                HandleMouseMovedEvent();
                 break;
         }
     }
 
     public void PrintFiguresInfo()
     {
-        List<BaseFigureDecorator> figures = _figuresHandler.GetFigures();
+        List<Shape> figures = _figuresHandler.GetFigures();
 
-        foreach (BaseFigureDecorator figure in figures)
+        if (figures.Count < 0)
+        {
+            return;
+        }
+
+        List<BaseFigureDecorator> figureDecorators = new List<BaseFigureDecorator>();
+
+        foreach (Shape figure in figures)
+        {
+            if (figure is RectangleShape)
+            {
+                figureDecorators.Add(new RectangleDecorator((RectangleShape)figure));
+            }
+            else if (figure is CircleShape)
+            {
+                figureDecorators.Add(new CircleDecorator((CircleShape)figure));
+            }    
+            else if (figure is TriangleShape)
+            {
+                figureDecorators.Add(new TriangleDecorator((TriangleShape)figure));
+            }
+        }
+
+        foreach (BaseFigureDecorator figure in figureDecorators)
         {
             Console.WriteLine(figure.GetDescription());
         }
     }
 
-    public void Draw()
+    private void Draw()
     {
         _figuresHandler.Draw();
         _toolbar.Draw();
+    }
+
+    private void HandleClosedEvent()
+    {
+        _window.Close();
+    }
+
+    private void HandleMouseButtonPressedEvent( Event e )
+    {
+        if (Keyboard.IsKeyPressed(Keyboard.Key.LShift))
+        {
+            if (e.MouseButton.Button == Mouse.Button.Left)
+            {
+                _state.OnLeftMouseButtonWithShift(_figuresHandler);
+            }
+        }
+        else
+        {
+            if (e.MouseButton.Button == Mouse.Button.Left)
+            {
+                _toolbar.PressToolButton();
+                _state = _toolbar.GetState();
+                _state.OnLeftMouseButton(_figuresHandler, _toolbar);
+            }
+        }
+    }
+
+    private void HandleKeyPressedEvent()
+    {
+        if (Keyboard.IsKeyPressed(Keyboard.Key.LControl))
+        {
+            if (Keyboard.IsKeyPressed(Keyboard.Key.G))
+            {
+                _state.OnGroup(_figuresHandler);
+            }
+            else if (Keyboard.IsKeyPressed(Keyboard.Key.U))
+            {
+                _state.OnUngroup(_figuresHandler);
+            }
+            else if (Keyboard.IsKeyPressed(Keyboard.Key.Z))
+            {
+                _figuresHandler.Undo();
+            }
+        }
+    }
+
+    private void HandleMouseMovedEvent()
+    {
+        if (Mouse.IsButtonPressed(Mouse.Button.Left))
+        {
+            _state.OnMouseMove(_figuresHandler);
+        }
     }
 }

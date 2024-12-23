@@ -29,14 +29,4 @@ public class RectangleDecorator : FigureDecorator
     {
         return _rectangleShape.GetType().Name + " | Perimeter: " + GetPerimeter() + " | Area: " + GetArea();
     }
-
-    public override void SetSize( float width, float height )
-    {
-        _rectangleShape.SetSize(width, height);
-    }
-
-    public override void SetOutlineThickness( float thickness )
-    {
-        _rectangleShape.SetOutlineThickness(thickness);
-    }
 }

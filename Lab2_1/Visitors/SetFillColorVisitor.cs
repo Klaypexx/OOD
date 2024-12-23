@@ -3,7 +3,7 @@ using SFML.Graphics;
 
 namespace Lab2_1.Visitors;
 
-public class SetFillColorVisitor : FigureDecoratorVisitor
+public class SetFillColorVisitor : FigureVisitor
 {
     private readonly Color _color;
 
@@ -12,7 +12,7 @@ public class SetFillColorVisitor : FigureDecoratorVisitor
         _color = color;
     }
 
-    public override void Visit( BaseFigureDecorator figure )
+    public override void Visit( Shapes.Shape figure )
     {
         figure.SetFillColor(_color);
     }

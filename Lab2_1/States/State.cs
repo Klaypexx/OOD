@@ -14,6 +14,4 @@ public class State
     public virtual void OnUngroup( FiguresHandler figuresHandler ) { }
 
     public virtual void OnMouseMove( FiguresHandler figuresHandler ) { }
-
-    public virtual void OnUndo( FiguresHandler figuresHandler ) { }
 }

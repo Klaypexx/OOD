@@ -1,8 +1,6 @@
-﻿using Lab2_1.Decorator;
+﻿namespace Lab2_1.Visitors;
 
-namespace Lab2_1.Visitors;
-
-public class ChangeOutlineThicknessVisitor: FigureDecoratorVisitor
+public class ChangeOutlineThicknessVisitor: FigureVisitor
 {
     private readonly float _outlineThickness;
 
@@ -11,7 +9,7 @@ public class ChangeOutlineThicknessVisitor: FigureDecoratorVisitor
         _outlineThickness = outlineThickness;
     }
 
-    public override void Visit( BaseFigureDecorator figure )
+    public override void Visit( Shapes.Shape figure )
     {
         figure.SetOutlineThickness( _outlineThickness );
     }
